@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monguno's Dealer — Admin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="noindex">
+  <style>
+    /* small admin-specific tweaks */
+    .admin-wrap{max-width:1100px;margin:22px auto;padding:0 16px}
+    .admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .admin-grid{display:grid;grid-template-columns:1fr 380px;gap:18px}
+    @media(max-width:900px){.admin-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="admin-wrap">
+    <div class="admin-header">
+      <div>
+        <h1>Monguno's Dealer — Admin</h1>
+        <div class="muted">Manage inventory (stored in your browser). Export/Import JSON backup for safekeeping.</div>
+      </div>
+
+      <div>
+        <button id="exportBtn" class="btn small">Export JSON</button>
+        <button id="importBtn" class="btn small outline">Import JSON</button>
+        <button id="resetBtn" class="btn small">Reset Demo</button>
+      </div>
+    </div>
+
+    <!-- Simple password gate -->
+    <div class="card" style="margin-bottom:12px">
+      <strong>Admin Access</strong>
+      <p class="muted">Enter password to unlock editing. (Prototype password stored in script.)</p>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input id="adminPass" class="form-control" placeholder="Password">
+        <button id="unlockBtn" class="btn">Unlock</button>
+        <button id="lockBtn" class="btn outline" style="display:none">Lock</button>
+        <span id="adminStatus" style="margin-left:10px;color:#b33"></span>
+      </div>
+      <div class="muted" style="margin-top:8px">Default prototype password: <strong>Abbakasim</strong></div>
+    </div>
+
+    <div class="admin-grid">
+      <div>
+        <div class="card">
+          <h3>Inventory</h3>
+          <div id="vehicleList" style="margin-top:12px"></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 id="editorTitle">Add Vehicle</h3>
+          <div class="form-group"><label>Make</label><input id="make" class="form-control"></div>
+          <div class="form-group"><label>Model</label><input id="model" class="form-control"></div>
+          <div class="form-group"><label>Year</label><input id="year" type="number" class="form-control"></div>
+          <div class="form-group"><label>Price (NGN)</label><input id="price" type="number" class="form-control"></div>
+          <div class="form-group"><label>Type</label><input id="type" class="form-control"></div>
+          <div class="form-group"><label>Image URL</label><input id="image" class="form-control" placeholder="https://..."></div>
+          <div class="form-group"><label>Transmission</label><input id="transmission" class="form-control"></div>
+          <div class="form-group"><label>Fuel</label><input id="fuel" class="form-control"></div>
+          <div class="form-group"><label>Seats</label><input id="seats" type="number" class="form-control" value="5"></div>
+
+          <div style="display:flex;gap:8px">
+            <button id="saveVehicle" class="btn">Save</button>
+            <button id="clearForm" class="btn outline">Clear</button>
+          </div>
+
+          <hr style="margin:12px 0">
+
+          <strong>Quick JSON</strong>
+          <p class="muted">Paste JSON array of vehicles and click Apply to import.</p>
+          <textarea id="jsonArea" rows="7" class="form-control"></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="applyJson" class="btn outline">Apply JSON</button>
+            <button id="clearJson" class="btn outline">Clear</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
