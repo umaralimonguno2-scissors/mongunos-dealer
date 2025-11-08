@@ -1,79 +1,10 @@
-/* --- Modern Showroom Style --- */
-:root{
-  --primary:#133254;
-  --secondary:#d4af37;
-  --accent:#c53030;
-  --muted:#6c757d;
-  --card:#ffffff;
-  --bg:#f5f7fa;
-}
-*{box-sizing:border-box}
-body{font-family:"Roboto",sans-serif;background:var(--bg);color:#1b1b1b;margin:0;line-height:1.5}
-.container{max-width:1200px;margin:0 auto;padding:0 16px}
-
-/* header */
-.site-header{background:linear-gradient(90deg,var(--primary),#184a7a);color:#fff;position:sticky;top:0;z-index:999}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
-.brand h1{font-family:"Poppins",sans-serif;margin:0;font-size:20px}
-.brand .tag{font-size:13px;color:rgba(255,255,255,.85);margin-left:6px}
-nav a{color:#fff;margin-left:14px;text-decoration:none;font-weight:500}
-.btn{background:var(--secondary);color:var(--primary);padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;border:none;cursor:pointer}
-.btn.small{padding:6px 10px;font-size:14px}
-.btn.outline{background:transparent;border:2px solid var(--secondary);color:#fff}
-.hamburger{display:none;background:none;border:none;color:#fff;font-size:18px}
-
-/* hero */
-.hero{background-image:linear-gradient(rgba(19,50,84,.6),rgba(19,50,84,.75)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=2070&q=80');background-size:cover;background-position:center;padding:64px 0;color:#fff}
-.hero-inner{display:flex;gap:20px;align-items:center;justify-content:space-between}
-.hero-text{max-width:620px}
-.hero-text h2{font-family:"Poppins",sans-serif;font-size:34px;margin-bottom:8px}
-.hero-ctas{margin-top:14px;display:flex;gap:10px;align-items:center}
-
-/* cards & layout */
-.section{padding:36px 0}
-.section-title{font-family:"Poppins",sans-serif;text-align:center;margin-bottom:18px}
-
-/* filters */
-.card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(17,24,39,.06)}
-.filters{margin-bottom:18px}
-.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
-.form-control{padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
-
-/* vehicles */
-.vehicles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
-.vehicle-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(20,25,35,.06);transition:transform .28s}
-.vehicle-card:hover{transform:translateY(-8px)}
-.vehicle-img{width:100%;height:180px;object-fit:cover;display:block}
-.vehicle-details{padding:14px}
-.vehicle-title{font-weight:700;margin-bottom:6px}
-.vehicle-price{color:var(--accent);font-weight:800;margin-bottom:8px}
-.vehicle-features{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
-.vehicle-features span{display:flex;gap:6px;align-items:center}
-
-/* services */
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.info-card{text-align:center;padding:18px;border-radius:10px;background:var(--card);box-shadow:0 8px 20px rgba(20,25,35,.04)}
-.icon-large{font-size:28px;color:var(--primary);margin-bottom:8px}
-
-/* about */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
-.about-visual{height:220px;background:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1000&q=80') center/cover;border-radius:12px}
-
-/* contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.muted{color:var(--muted)}
-.center{text-align:center}
-
-/* footer */
-.site-footer{background:#0f1720;color:#cbd5e1;padding:28px 0;margin-top:28px}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;padding-bottom:8px}
-
-/* small screens */
-@media(max-width:900px){
-  .hero-inner{flex-direction:column;align-items:flex-start}
-  nav a{display:none}
-  .hamburger{display:block}
-  .contact-grid{grid-template-columns:1fr}
-  .two-col{grid-template-columns:1fr}
-  .header-row{align-items:center}
-}
+body { font-family: Arial; margin: 0; padding: 0; background: #f7f7f7; color: #222; }
+header { background: #111; color: #fff; padding: 1em; display: flex; justify-content: space-between; align-items: center; }
+nav a { color: #fff; margin-left: 1em; text-decoration: none; }
+.vehicles { padding: 2em; }
+.vehicle-card { background: white; padding: 1em; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1em; }
+.vehicle-card img { width: 100%; border-radius: 10px; }
+.price { font-weight: bold; color: green; }
+footer { background: #111; color: white; text-align: center; padding: 1em; }
+button { padding: 0.5em 1em; background: green; color: white; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: darkgreen; }

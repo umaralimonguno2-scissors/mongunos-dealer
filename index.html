@@ -1,189 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Monguno's Dealer — Showroom</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-
-  <meta name="description" content="Monguno's Dealer — Premium new & pre-owned vehicles in Borno. Browse inventory, contact us, or sign in to admin.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monguno's Dealer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-row">
-      <div class="brand">
-        <h1>Monguno<span class="accent">'s</span> Dealer</h1>
-        <div class="tag">Borno — Since 2005</div>
-      </div>
+<header>
+  <h1>Monguno's Dealer</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#inventory">Inventory</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn small" href="admin.html" title="Admin Panel">Admin</a>
-      </nav>
+<section class="vehicles">
+  <h2>Available Cars</h2>
+  <div class="vehicle-card">
+    <img src="images/car1.jpg" alt="Toyota Camry">
+    <h3>2022 Toyota Camry</h3>
+    <p class="price">₦8,500,000</p>
+    <p>Automatic | Petrol | 5 Seats</p>
+  </div>
+</section>
 
-      <button id="mobileMenuBtn" class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-    </div>
-  </header>
+<footer>
+  <p>&copy; 2025 Monguno's Dealer</p>
+</footer>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2>Find Your Perfect Vehicle in Borno</h2>
-          <p>Quality new & pre-owned cars, flexible financing and trusted after-sales. Browse inventory or contact us today.</p>
-          <div class="hero-ctas">
-            <a href="#inventory" class="btn">Browse Inventory</a>
-            <a href="#contact" class="btn outline">Contact Us</a>
-          </div>
-        </div>
-        <div class="hero-image" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <!-- INVENTORY -->
-    <section class="container section" id="inventory">
-      <h2 class="section-title">Featured Vehicles</h2>
-
-      <div class="filters card">
-        <div class="filter-grid">
-          <select id="makeFilter" class="form-control">
-            <option value="">All Makes</option>
-          </select>
-          <select id="typeFilter" class="form-control">
-            <option value="">All Types</option>
-          </select>
-          <select id="priceFilter" class="form-control">
-            <option value="">Any Price</option>
-            <option value="0-5000000">Under ₦5M</option>
-            <option value="5000000-10000000">₦5M - ₦10M</option>
-            <option value="10000000-20000000">₦10M - ₦20M</option>
-            <option value="20000000">Over ₦20M</option>
-          </select>
-          <select id="yearFilter" class="form-control">
-            <option value="">Any Year</option>
-            <option value="2020-2023">2020-2023</option>
-            <option value="2015-2019">2015-2019</option>
-            <option value="2010-2014">2010-2014</option>
-            <option value="2009">Before 2010</option>
-          </select>
-        </div>
-      </div>
-
-      <div id="vehiclesGrid" class="vehicles-grid">
-        <!-- JS will render vehicles here -->
-      </div>
-
-      <div class="center" style="margin:28px 0 12px">
-        <a href="admin.html" class="btn">Manage Inventory (Admin)</a>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section services-section">
-      <div class="container">
-        <h2 class="section-title center">Our Services</h2>
-        <div class="cards-grid">
-          <div class="info-card"><i class="fas fa-car icon-large"></i><h3>Vehicle Sales</h3><p>New & pre-owned, inspected & certified.</p></div>
-          <div class="info-card"><i class="fas fa-tools icon-large"></i><h3>Auto Repair</h3><p>Maintenance & repairs by trained techs.</p></div>
-          <div class="info-card"><i class="fas fa-file-contract icon-large"></i><h3>Financing</h3><p>Flexible payment plans available.</p></div>
-          <div class="info-card"><i class="fas fa-shield-alt icon-large"></i><h3>Insurance</h3><p>Assistance with insurance packages.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="container section about-section" id="about">
-      <div class="two-col">
-        <div>
-          <h2 class="section-title">About Monguno's Dealer</h2>
-          <p>Since 2005, Monguno's Dealer has built trust across Borno State with quality vehicles and honest service. We help customers find reliable cars that fit budgets and needs.</p>
-          <p><a class="btn" href="#contact">Contact Us</a></p>
-        </div>
-        <div class="about-visual" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="container section" id="contact">
-      <h2 class="section-title center">Contact Us</h2>
-
-      <div class="contact-grid">
-        <div class="card contact-info">
-          <h3>Visit Our Showroom</h3>
-          <p class="muted">123 Automotive Avenue, Monguno, Borno State, Nigeria</p>
-          <h4 style="margin-top:12px">Call</h4>
-          <p class="muted">+234 913 747 6363</p>
-          <h4 style="margin-top:12px">Email</h4>
-          <p class="muted">umaralimonguno2@gmail.com</p>
-        </div>
-
-        <div class="card contact-form">
-          <!-- FormSubmit integration -->
-          <form id="contactForm" action="https://formsubmit.co/umaralimonguno2@gmail.com" method="POST" target="_blank">
-            <input type="hidden" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-            <!-- optional: set _next to redirect after submit -->
-            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html"> -->
-
-            <div class="form-row">
-              <input class="form-control" name="name" type="text" placeholder="Your name" required>
-              <input class="form-control" name="email" type="email" placeholder="Your email" required>
-            </div>
-            <div class="form-row">
-              <input class="form-control" name="phone" type="tel" placeholder="Phone (optional)">
-              <select class="form-control" name="subject" required>
-                <option value="">Subject</option>
-                <option value="sales">Vehicle Sales</option>
-                <option value="service">Auto Service</option>
-                <option value="parts">Parts</option>
-                <option value="finance">Financing</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <textarea class="form-control" name="message" placeholder="Your message" required></textarea>
-            <div style="display:flex;gap:8px;align-items:center;margin-top:10px">
-              <button class="btn" type="submit">Send Message</button>
-              <div style="font-size:13px;color:#888">Messages go to <strong>umaralimonguno2@gmail.com</strong></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3 class="accent">Monguno's Dealer</h3>
-        <p class="muted">Your trusted automotive partner in Borno State since 2005.</p>
-      </div>
-      <div>
-        <h4 style="color:#fff">Quick Links</h4>
-        <ul class="muted quick-links">
-          <li><a href="#inventory">Inventory</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff">Contact</h4>
-        <p class="muted"><i class="fas fa-phone"></i> +234 913 747 6363</p>
-        <p class="muted"><i class="fas fa-envelope"></i> umaralimonguno2@gmail.com</p>
-      </div>
-    </div>
-    <div class="center" style="padding:16px;color:#aaa">&copy; 2025 Monguno's Dealer — All rights reserved.</div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

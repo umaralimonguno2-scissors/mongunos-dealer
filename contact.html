@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Monguno's Dealer</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function() {
+    emailjs.init({ publicKey: "f2KIbN_cexK_rsW_X" });
+})();
+
+function sendMail() {
+    const params = {
+        from_name: document.getElementById('name').value,
+        reply_to: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        phone: document.getElementById('phone').value,
+    };
+
+    emailjs.send("service_yqfjm59", "template_08wybdk", params)
+        .then(() => alert("Message sent successfully!"))
+        .catch((err) => alert("Failed to send message: " + JSON.stringify(err)));
+}
+</script>
+</head>
+<body>
+<h1>Contact Us</h1>
+<form onsubmit="event.preventDefault(); sendMail();">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="email" id="email" placeholder="Your Email" required><br>
+  <input type="text" id="phone" placeholder="Your Phone"><br>
+  <textarea id="message" placeholder="Your Message" required></textarea><br>
+  <button type="submit">Send</button>
+</form>
+</body>
+</html>
